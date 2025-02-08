@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Health Assistant</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <div class="container">
+        <h1>🩺 Personal Health Assistant</h1>
+        <p>Click the button below to fetch your health report.</p>
+        <button id="fetchReport">🔄 Get Health Report</button>
+
+        <div id="healthData" class="card hidden">
+            <h2>📊 Your Health Data</h2>
+            <table id="dataTable"></table>
+        </div>
+
+        <div id="healthReport" class="card hidden">
+            <h2>📑 Health Recommendations</h2>
+            <div id="reportContent"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

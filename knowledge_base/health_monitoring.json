@@ -1,0 +1,354 @@
+{
+    "heart_rate": {
+      "normal": {
+        "range": "60-100 BPM",
+        "interpretation": "Normal resting heart rate."
+      },
+      "low": {
+        "threshold": "< 60 BPM",
+        "severity": "moderate",
+        "possible_causes": [
+          "Bradycardia",
+          "Medication side effects (beta blockers, calcium channel blockers)",
+          "Athletic conditioning",
+          "Hypothyroidism",
+          "Electrolyte imbalances"
+        ],
+        "warning_signs": [
+          "Dizziness",
+          "Fatigue",
+          "Shortness of breath",
+          "Confusion",
+          "Chest pain"
+        ],
+        "immediate_actions": [
+          "Sit or lie down if feeling dizzy",
+          "Check if medications might be causing slow heart rate",
+          "Monitor other symptoms"
+        ],
+        "when_to_seek_emergency": [
+          "Fainting",
+          "Severe shortness of breath",
+          "Chest pain lasting more than a few minutes"
+        ],
+        "recommendations": {
+          "lifestyle": [
+            "Regular cardiovascular check-ups",
+            "Keep detailed symptom diary",
+            "Moderate exercise as approved by doctor"
+          ],
+          "monitoring": [
+            "Daily heart rate measurements",
+            "Blood pressure monitoring",
+            "Sleep pattern tracking"
+          ],
+          "exercises": [
+            "Brisk walking",
+            "Cycling",
+            "Swimming"
+          ],
+          "medications": [
+            "Doctor may adjust beta blockers if necessary",
+            "Thyroid hormone supplements for hypothyroidism"
+          ],
+          "meditation_yoga": [
+            "Deep breathing exercises",
+            "Yoga poses like Sukhasana and Anulom Vilom"
+          ]
+        }
+      },
+      "high": {
+        "threshold": "> 100 BPM",
+        "severity": "moderate_to_high",
+        "possible_causes": [
+          "Anxiety",
+          "Fever",
+          "Dehydration",
+          "Hyperthyroidism",
+          "Anemia",
+          "Medication side effects",
+          "Heart rhythm disorders"
+        ],
+        "warning_signs": [
+          "Palpitations",
+          "Shortness of breath",
+          "Chest pain",
+          "Dizziness",
+          "Sweating"
+        ],
+        "immediate_actions": [
+          "Sit or lie down",
+          "Practice slow breathing exercises",
+          "Stay hydrated",
+          "Avoid caffeine and stimulants"
+        ],
+        "when_to_seek_emergency": [
+          "Severe chest pain",
+          "Fainting or severe dizziness",
+          "Shortness of breath not relieved by rest"
+        ],
+        "recommendations": {
+          "lifestyle": [
+            "Reduce stress through relaxation techniques",
+            "Ensure adequate hydration",
+            "Balanced diet rich in iron for anemia"
+          ],
+          "monitoring": [
+            "Wearable ECG monitoring",
+            "Track caffeine intake",
+            "Keep a symptom journal"
+          ],
+          "exercises": [
+            "Light jogging",
+            "Tai Chi",
+            "Stretching exercises"
+          ],
+          "medications": [
+            "Beta blockers (if prescribed)",
+            "Electrolyte supplements for dehydration"
+          ],
+          "meditation_yoga": [
+            "Guided meditation for stress relief",
+            "Shavasana for relaxation"
+          ]
+        }
+      }
+    },
+    "blood_pressure": {
+      "normal": {
+        "systolic_range": "90-120 mmHg",
+        "diastolic_range": "60-80 mmHg",
+        "interpretation": "Optimal blood pressure."
+      },
+      "low": {
+        "threshold": "< 90/60 mmHg",
+        "severity": "moderate",
+        "possible_causes": [
+          "Dehydration",
+          "Heart conditions",
+          "Endocrine disorders",
+          "Blood loss",
+          "Nutritional deficiencies"
+        ],
+        "warning_signs": [
+          "Dizziness",
+          "Fainting",
+          "Blurred vision",
+          "Fatigue",
+          "Nausea"
+        ],
+        "immediate_actions": [
+          "Drink water and increase fluid intake",
+          "Eat small, frequent meals",
+          "Avoid sudden posture changes"
+        ],
+        "when_to_seek_emergency": [
+          "Persistent dizziness",
+          "Shock symptoms like rapid breathing and confusion"
+        ],
+        "recommendations": {
+          "lifestyle": [
+            "Stay hydrated",
+            "Increase salt intake if advised by doctor",
+            "Compression stockings for circulation"
+          ],
+          "monitoring": [
+            "Regular blood pressure checks",
+            "Track symptoms and triggers"
+          ],
+          "exercises": [
+            "Leg raises",
+            "Seated marches",
+            "Mild resistance training"
+          ],
+          "medications": [
+            "Fludrocortisone (if prescribed)",
+            "Midodrine for severe cases"
+          ],
+          "meditation_yoga": [
+            "Gentle yoga poses like Sukhasana",
+            "Breathing techniques for circulation"
+          ]
+        }
+      },
+      "high": {
+        "threshold": "> 130/80 mmHg",
+        "severity": "high",
+        "possible_causes": [
+          "Obesity",
+          "High sodium diet",
+          "Chronic stress",
+          "Lack of physical activity",
+          "Genetic predisposition",
+          "Kidney disease"
+        ],
+        "warning_signs": [
+          "Headaches",
+          "Dizziness",
+          "Nosebleeds",
+          "Shortness of breath",
+          "Blurred vision"
+        ],
+        "immediate_actions": [
+          "Practice deep breathing to reduce stress",
+          "Reduce sodium intake immediately",
+          "Increase water intake",
+          "Sit in a calm, quiet place"
+        ],
+        "when_to_seek_emergency": [
+          "If BP exceeds 180/120 mmHg (hypertensive crisis)",
+          "Severe chest pain",
+          "Sudden vision loss",
+          "Confusion or difficulty speaking"
+        ],
+        "recommendations": {
+          "lifestyle": [
+            "Follow the DASH diet",
+            "Maintain a healthy weight",
+            "Reduce caffeine and alcohol intake",
+            "Ensure 7-9 hours of quality sleep"
+          ],
+          "monitoring": [
+            "Daily blood pressure tracking",
+            "Check cholesterol levels regularly",
+            "Monitor stress levels"
+          ],
+          "exercises": [
+            "Brisk walking (30 min/day)",
+            "Swimming",
+            "Cycling",
+            "Strength training (light weights)"
+          ],
+          "medications": [
+            "ACE inhibitors (e.g., Lisinopril)",
+            "Beta-blockers (e.g., Metoprolol)",
+            "Calcium channel blockers (e.g., Amlodipine)",
+            "Diuretics (e.g., Hydrochlorothiazide)"
+          ],
+          "meditation_yoga": [
+            "Pranayama (deep breathing exercises)",
+            "Savasana (relaxation pose)",
+            "Viparita Karani (legs-up-the-wall pose)"
+          ]
+        }
+      }
+    },
+    "oxygen_saturation": {
+      "normal": {
+        "range": "95-100%",
+        "interpretation": "Normal oxygen levels."
+      },
+      "low": {
+        "threshold": "< 94%",
+        "severity": "moderate",
+        "possible_causes": [
+          "Respiratory infections (e.g., pneumonia, COVID-19)",
+          "Chronic lung diseases (e.g., COPD, asthma)",
+          "High altitude exposure",
+          "Anemia",
+          "Obstructive sleep apnea"
+        ],
+        "warning_signs": [
+          "Shortness of breath",
+          "Rapid breathing",
+          "Confusion or dizziness",
+          "Bluish tint on lips or fingertips",
+          "Chest tightness"
+        ],
+        "immediate_actions": [
+          "Practice deep breathing exercises",
+          "Move to an area with fresh air",
+          "Use a pulse oximeter for continuous monitoring",
+          "Loosen tight clothing to improve airflow"
+        ],
+        "when_to_seek_emergency": [
+          "If SpO₂ drops below 90% for an extended period",
+          "Severe shortness of breath even at rest",
+          "Bluish skin or lips",
+          "Loss of consciousness"
+        ],
+        "recommendations": {
+          "lifestyle": [
+            "Avoid smoking and exposure to pollutants",
+            "Use a humidifier for better air quality",
+            "Ensure proper ventilation in living spaces"
+          ],
+          "monitoring": [
+            "Regular pulse oximeter checks",
+            "Monitor respiratory rate",
+            "Track symptoms in a health journal"
+          ],
+          "exercises": [
+            "Pursed-lip breathing",
+            "Diaphragmatic breathing",
+            "Blow bottle technique for lung strengthening"
+          ],
+          "medications": [
+            "Bronchodilators (e.g., Albuterol for asthma)",
+            "Corticosteroids (e.g., Prednisone for inflammation)",
+            "Oxygen therapy (if prescribed by a doctor)"
+          ],
+          "meditation_yoga": [
+            "Anulom Vilom (alternate nostril breathing)",
+            "Bhujangasana (cobra pose) for lung expansion",
+            "Bhramari Pranayama (humming bee breath) for relaxation"
+          ]
+        }
+      },
+      "critically_low": {
+        "threshold": "< 85%",
+        "severity": "high",
+        "possible_causes": [
+          "Severe pneumonia",
+          "Pulmonary embolism",
+          "Acute respiratory distress syndrome (ARDS)",
+          "Lung collapse (pneumothorax)",
+          "Severe COVID-19 infection"
+        ],
+        "warning_signs": [
+          "Extreme difficulty breathing",
+          "Profound confusion or unconsciousness",
+          "Rapid and shallow breathing",
+          "Severe bluish discoloration of lips or nails"
+        ],
+        "immediate_actions": [
+          "Seek immediate medical attention (Call emergency services)",
+          "Administer supplemental oxygen if available",
+          "Ensure patient is sitting upright to ease breathing",
+          "Avoid exertion and stay as calm as possible"
+        ],
+        "when_to_seek_emergency": [
+          "SpO₂ below 85% even with oxygen therapy",
+          "Severe respiratory distress",
+          "Sudden inability to speak due to breathlessness"
+        ],
+        "recommendations": {
+          "lifestyle": [
+            "Avoid exposure to allergens and pollutants",
+            "Use prescribed oxygen therapy as needed",
+            "Regular doctor visits for lung function assessment"
+          ],
+          "monitoring": [
+            "Continuous SpO₂ tracking with a pulse oximeter",
+            "Monitor blood gases if advised by a doctor",
+            "Check for signs of fluid retention (swelling in legs)"
+          ],
+          "exercises": [
+            "Paced breathing techniques",
+            "Respiratory muscle training",
+            "Light stretching exercises"
+          ],
+          "medications": [
+            "Oxygen therapy (if required)",
+            "Diuretics for fluid management (in case of heart failure)",
+            "Antibiotics for bacterial infections"
+          ],
+          "meditation_yoga": [
+            "Kapalabhati Pranayama (skull-shining breath for lung cleansing)",
+            "Matsyasana (fish pose to open the chest)",
+            "Ujjayi Pranayama (victorious breath for airway expansion)"
+          ]
+        }
+      }
+    }
+  }

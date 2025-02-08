@@ -1,0 +1,244 @@
+{
+    "data":{
+       "calories_burned":{
+          "low":{
+             "range":"0-200",
+             "possible_causes":[
+                "Sedentary lifestyle",
+                "Low physical activity",
+                "Metabolic slowdown"
+             ],
+             "recommendations":{
+                "lifestyle":[
+                   "Engage in at least 30 minutes of moderate exercise daily",
+                   "Take stairs instead of elevators",
+                   "Walk or cycle for short commutes"
+                ],
+                "diet":{
+                   "goal":"Boost metabolism and energy levels",
+                   "recommended_foods":[
+                      "Almonds, walnuts, and chia seeds for healthy fats",
+                      "Bananas, apples, and oranges for natural energy",
+                      "Whole grains like brown rice, quinoa, and oats",
+                      "Protein sources like lentils, eggs, and tofu"
+                   ],
+                   "meal_plan":[
+                      "Breakfast: Oatmeal with almonds and honey",
+                      "Lunch: Quinoa salad with chickpeas and olive oil",
+                      "Dinner: Grilled paneer/tofu with steamed vegetables",
+                      "Snacks: A handful of nuts or a banana"
+                   ],
+                   "hydration":[
+                      "Drink at least 2 liters of water daily",
+                      "Include herbal teas or infused water with lemon and mint"
+                   ]
+                },
+                "exercises":[
+                   "Brisk walking for 20-30 minutes",
+                   "Bodyweight exercises like squats, lunges, and push-ups",
+                   "Light yoga stretches (Tadasana, Bhujangasana) to improve flexibility"
+                ]
+             }
+          },
+          "moderate":{
+             "range":"201-500",
+             "interpretation":"Maintaining healthy calorie burn.",
+             "benefits":[
+                "Supports weight management",
+                "Improves cardiovascular health",
+                "Boosts metabolism"
+             ],
+             "recommendations":{
+                "lifestyle":[
+                   "Continue regular exercise",
+                   "Maintain a balanced diet"
+                ],
+                "diet":{
+                   "goal":"Support energy levels and recovery",
+                   "recommended_foods":[
+                      "Greek yogurt, eggs, and lean meats for protein",
+                      "Sweet potatoes, brown rice, and whole wheat bread for carbohydrates",
+                      "Leafy greens like spinach and kale for essential nutrients",
+                      "Fruits like papaya, mango, and strawberries for vitamins"
+                   ],
+                   "meal_plan":[
+                      "Breakfast: Scrambled eggs with whole-wheat toast and orange juice",
+                      "Lunch: Grilled chicken with brown rice and sautéed spinach",
+                      "Dinner: Dal (lentils) with roti and a side of cucumber salad",
+                      "Snacks: A protein smoothie with banana and chia seeds"
+                   ],
+                   "hydration":[
+                      "Stay hydrated, especially before and after workouts",
+                      "Include coconut water for electrolytes"
+                   ]
+                },
+                "exercises":[
+                   "Strength training 2-3 times a week",
+                   "Cardio activities like running, swimming, or cycling",
+                   "Yoga for core strength (Surya Namaskar, Warrior Pose)"
+                ]
+             }
+          },
+          "high":{
+             "range":"501+",
+             "possible_causes":[
+                "Intense workouts",
+                "High metabolic rate",
+                "Active lifestyle"
+             ],
+             "recommendations":{
+                "lifestyle":[
+                   "Ensure proper recovery time",
+                   "Listen to body signals to avoid overtraining"
+                ],
+                "diet":{
+                   "goal":"Support muscle recovery and prevent energy depletion",
+                   "recommended_foods":[
+                      "High-protein foods like chicken, fish, paneer, and soybeans",
+                      "Complex carbohydrates like quinoa, oats, and whole wheat pasta",
+                      "Antioxidant-rich foods like blueberries, almonds, and dark chocolate",
+                      "Hydrating fruits like watermelon, cucumber, and coconut"
+                   ],
+                   "meal_plan":[
+                      "Breakfast: Protein smoothie with banana, almond milk, and chia seeds",
+                      "Lunch: Grilled salmon with quinoa and roasted vegetables",
+                      "Dinner: Paneer or tofu stir-fry with brown rice",
+                      "Snacks: Greek yogurt with honey and mixed nuts"
+                   ],
+                   "hydration":[
+                      "Drink 3+ liters of water daily",
+                      "Include electrolytes to replenish lost minerals",
+                      "Consume post-workout smoothies with protein and healthy fats"
+                   ]
+                },
+                "exercises":[
+                   "Strength and resistance training",
+                   "Interval training for endurance",
+                   "Yoga for recovery (Child’s Pose, Pigeon Pose)"
+                ],
+                "when_to_seek_help":[
+                   "If experiencing excessive fatigue",
+                   "If calorie deficit leads to dizziness or muscle weakness"
+                ]
+             }
+          }
+       },
+       "body_temperature":{
+          "normal":{
+             "range":"36.1-37.2°C",
+             "interpretation":"Normal body temperature."
+          },
+          "low":{
+             "threshold":"< 36°C",
+             "severity":"moderate_to_high",
+             "possible_causes":[
+                "Hypothermia",
+                "Underactive thyroid (Hypothyroidism)",
+                "Prolonged exposure to cold",
+                "Severe infections (sepsis)",
+                "Malnutrition",
+                "Side effects of certain medications (sedatives, anesthetics)"
+             ],
+             "warning_signs":[
+                "Shivering",
+                "Slow breathing",
+                "Fatigue",
+                "Pale or cold skin",
+                "Confusion",
+                "Slow heart rate"
+             ],
+             "immediate_actions":[
+                "Move to a warmer environment",
+                "Wear layered, insulated clothing",
+                "Drink warm, non-alcoholic beverages",
+                "Perform light physical activity (if possible)",
+                "Use warm compresses on chest and neck"
+             ],
+             "when_to_seek_emergency":[
+                "Body temperature below 35°C",
+                "Severe confusion or unconsciousness",
+                "Slow or irregular heartbeat"
+             ],
+             "recommendations":{
+                "lifestyle":[
+                   "Avoid prolonged exposure to cold temperatures",
+                   "Consume warm meals and drinks regularly",
+                   "Maintain a balanced diet with adequate calories"
+                ],
+                "monitoring":[
+                   "Check temperature regularly in cold conditions",
+                   "Monitor for symptoms of hypothermia"
+                ],
+                "exercises":[
+                   "Mild aerobic exercises (to generate body heat)",
+                   "Tai Chi for circulation improvement"
+                ],
+                "medications":[
+                   "Thyroid hormone replacement (for hypothyroidism, if prescribed)",
+                   "Vitamin B12 supplements (if deficiency is suspected)"
+                ],
+                "meditation_yoga":[
+                   "Sun Salutation (Surya Namaskar) for warmth",
+                   "Bhastrika Pranayama (Bellows Breath) to generate heat"
+                ]
+             }
+          },
+          "high":{
+             "threshold":"> 38°C",
+             "severity":"high",
+             "possible_causes":[
+                "Fever due to infection (viral, bacterial, fungal)",
+                "Heatstroke",
+                "Autoimmune or inflammatory conditions",
+                "Hyperthyroidism",
+                "Dehydration",
+                "Reaction to certain medications (antibiotics, stimulants)"
+             ],
+             "warning_signs":[
+                "Excessive sweating",
+                "Headache",
+                "Chills and shivering",
+                "Muscle aches",
+                "Rapid heartbeat",
+                "Severe fatigue"
+             ],
+             "immediate_actions":[
+                "Rest in a cool, shaded place",
+                "Drink plenty of fluids (preferably water or electrolyte solutions)",
+                "Apply a cool, damp cloth on forehead and neck",
+                "Take lukewarm (not cold) showers"
+             ],
+             "when_to_seek_emergency":[
+                "If temperature exceeds 39.5°C and persists for more than 3 days",
+                "Severe headache, confusion, or difficulty breathing",
+                "Seizures or loss of consciousness"
+             ],
+             "recommendations":{
+                "lifestyle":[
+                   "Stay hydrated throughout the day",
+                   "Maintain good hygiene to prevent infections",
+                   "Avoid prolonged exposure to high temperatures"
+                ],
+                "monitoring":[
+                   "Regular temperature checks if fever persists",
+                   "Hydration tracking"
+                ],
+                "exercises":[
+                   "Gentle stretching or yoga (if fever is mild)",
+                   "Avoid strenuous activities until fully recovered"
+                ],
+                "medications":[
+                   "Paracetamol (Acetaminophen) or Ibuprofen (if prescribed)",
+                   "Antibiotics (only if bacterial infection is diagnosed)",
+                   "Electrolyte supplements (for dehydration cases)"
+                ],
+                "meditation_yoga":[
+                   "Shitali Pranayama (Cooling Breath) for fever relief",
+                   "Savasana (Corpse Pose) for relaxation and recovery"
+                ]
+             }
+          }
+       }
+    },
+    "summary":"The AI-Powered Nutrition & Hydration Tracker leverages calorie burn and body temperature data to provide personalized meal, exercise, and hydration recommendations. For better nutrition, detailed meal plans suggest balanced options: low energy scenarios focus on energizing breakfasts like oatmeal with almonds and light meals such as quinoa salads, while higher energy demands recommend protein-rich meals like grilled salmon or paneer stir-fry. Accompanying these meal plans are targeted exercise recommendations—ranging from brisk walks and bodyweight routines to strength training and yoga—that help optimize calorie burn and support overall health. Additionally, hydration reminders, tailored by activity and body temperature, ensure the body remains well-fueled and balanced throughout the day."
+ }
