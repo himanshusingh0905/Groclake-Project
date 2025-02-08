@@ -1,77 +1,104 @@
-/* Light theme colors */
-:root {
-    --primary-color: #4CAF50;
-    --bg-color: #f8f9fa;
-    --text-color: #333;
-    --card-bg: #ffffff;
-    --btn-bg: #4CAF50;
-    --btn-hover: #45a049;
-    --border-color: #ddd;
+/* Reset styles */
+body, h1, h2, p {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 body {
     font-family: 'Arial', sans-serif;
-    background-color: var(--bg-color);
-    color: var(--text-color);
-    text-align: center;
-    margin: 0;
-    padding: 0;
+    background-color: #e9f5ff;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; /* Align to top to allow dynamic height */
+    min-height: 100vh;
+    padding: 20px; /* Added padding for better spacing */
 }
 
+/* Container: Initially small, expands on button click */
 .container {
-    max-width: 800px;
-    margin: 50px auto;
-    padding: 20px;
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    max-width: 500px;
+    text-align: center;
+    transition: max-width 0.5s ease-in-out; /* Smooth expansion effect */
+}
+
+.container.expanded {
+    max-width: 700px; /* Expands after fetching data */
 }
 
 h1 {
-    color: var(--primary-color);
+    font-size: 2.4em;
+    color: #007bff;
+    margin-bottom: 15px;
+}
+
+.intro-text {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+    color: #666;
 }
 
 button {
-    background-color: var(--btn-bg);
+    background-color: #28a745;
     color: white;
     border: none;
-    padding: 10px 20px;
-    font-size: 16px;
+    padding: 12px 25px;
+    border-radius: 8px;
     cursor: pointer;
-    border-radius: 5px;
+    font-size: 1em;
+    transition: background-color 0.3s, transform 0.2s;
 }
 
 button:hover {
-    background-color: var(--btn-hover);
+    background-color: #218838;
+    transform: scale(1.05);
 }
 
+/* Loading Animation */
+.loading {
+    display: none;
+    font-size: 1.2em;
+    color: #007bff;
+    margin-top: 15px;
+}
+
+/* Cards for Data */
 .card {
-    background: var(--card-bg);
-    padding: 20px;
     margin-top: 20px;
+    padding: 15px;
+    background: #f9f9f9;
     border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    border: 1px solid var(--border-color);
-    text-align: left;
-}
-
-.hidden {
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
     display: none;
 }
 
+/* Table Styling */
 table {
     width: 100%;
     border-collapse: collapse;
     margin-top: 10px;
 }
 
-table, th, td {
-    border: 1px solid var(--border-color);
-}
-
 th, td {
-    padding: 8px;
+    padding: 10px;
     text-align: left;
+    border-bottom: 1px solid #ddd;
 }
 
 th {
-    background-color: var(--primary-color);
-    color: white;
+    background-color: #f8f9fa;
+    color: #0056b3;
+}
+
+/* Ensure text does not get cut */
+p {
+    word-wrap: break-word;
+    white-space: normal;
+    overflow-wrap: break-word;
+    line-height: 1.5;
 }

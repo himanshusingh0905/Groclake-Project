@@ -3,8 +3,6 @@ import pandas as pd
 import random
 import os
 
-# Ensure ChromaDB is initialized
-import chroma_db  # This runs the script and loads knowledge into ChromaDB
 from agent import HealthPartner  # Import the HealthPartner class
 
 app = Flask(__name__)
@@ -37,7 +35,7 @@ def get_health_recommendation():
     if error:
         return jsonify(error), 400
 
-    # Create a HealthPartner instance and get recommendations automatically
+    # Create a HealthPartner instance
     health_agent = HealthPartner(data)
     health_report = health_agent.get_recommendations()
 

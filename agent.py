@@ -1,8 +1,7 @@
-
-import chromadb
 import json
 import os
 from groclake.modellake import Modellake
+from chroma_db import ChromaDBManager 
 
 # Environment variable setup
 GROCLAKE_API_KEY = '1f0e3dad99908345f7439f8ffabdffc4'
@@ -10,57 +9,20 @@ GROCLAKE_ACCOUNT_ID = '769a16ce40a17e373db96c19803c0f4d'
 
 os.environ['GROCLAKE_API_KEY'] = GROCLAKE_API_KEY
 os.environ['GROCLAKE_ACCOUNT_ID'] = GROCLAKE_ACCOUNT_ID
+
 # Initialize Modellake instance
 model_lake = Modellake()
 
 class HealthPartner:
     def __init__(self, data):
-        """Initialize with health data."""
+        """Initialize with health data and ChromaDB."""
         self.user_data = data
+        # Initialize ChromaDBManager
+        self.chroma_manager = ChromaDBManager()
+        self.chroma_manager.load_health_knowledge() 
 
-        # Initialize ChromaDB client
-        self.chroma_client = chromadb.PersistentClient(path="./chroma_db")
-        self.collection = self.chroma_client.get_collection(name="health_recommendations")
-
-    # def query_chromadb(self, category, prompt):
-    #     """Queries ChromaDB and enhances response with LLM."""
-    #     results = self.collection.query(
-    #         query_texts=[prompt],
-    #         where={"category": category},
-    #         n_results=3
-    #     )
-
-    #     retrieved_docs = [json.loads(doc) for doc in results["documents"][0]] if results["documents"] else []
-        
-    #     # Convert retrieved documents into a summary
-    #     retrieved_texts = "\n".join([doc["text"] for doc in retrieved_docs])
-        
-    #     # Pass to LLM for better response generation
-    #     return self.generate_llm_response(prompt, retrieved_texts)
-
-    # def generate_llm_response(self, prompt, retrieved_text):
-    #     """Uses OpenAI GPT to refine and personalize the response."""
-    #     llm_prompt = f"""
-    #     You are a health assistant providing personalized recommendations.
-
-    #     User Data: {prompt}
-
-    #     Retrieved Health Knowledge:
-    #     {retrieved_text}
-
-    #     Based on the above, generate a highly personalized and friendly recommendation.
-    #     """
-
-    #     response = openai.ChatCompletion.create(
-    #         model="gpt-4-turbo",
-    #         messages=[{"role": "system", "content": llm_prompt}],
-    #         temperature=0.7
-    #     )
-
-    #     return response["choices"][0]["message"]["content"]
-
-
-
+        self.collection = self.chroma_manager.get_collection()
+        print("Existing collections:", self.collection)
 
     def query_chromadb(self, category, prompt):
         """Queries ChromaDB and enhances response with LLM."""
@@ -70,60 +32,38 @@ class HealthPartner:
             n_results=3
         )
 
-        # Debugging: Print what ChromaDB is returning
-        print("Raw ChromaDB Results:", results)
-
         retrieved_docs = []
-        
-        if results.get("documents"):  # Ensure "documents" key exists
+        if results.get("documents"):
             for doc_list in results["documents"]:
                 for doc in doc_list:
-                    if isinstance(doc, dict):  # Already a dictionary, use directly
-                        retrieved_docs.append(doc)
-                    elif isinstance(doc, str):  # String: Try to parse JSON
-                        try:
-                            parsed_doc = json.loads(doc)
-                            if isinstance(parsed_doc, dict):  # Ensure it's a dict after parsing
-                                retrieved_docs.append(parsed_doc)
-                            else:
-                                print(f"Unexpected format after parsing: {parsed_doc}")
-                        except json.JSONDecodeError:
-                            print(f"Error decoding JSON for doc: {doc}")
-                    else:
-                        print(f"Unexpected document type: {type(doc)} - {doc}")
+                    try:
+                        parsed_doc = json.loads(doc) if isinstance(doc, str) else doc
+                        if isinstance(parsed_doc, dict):
+                            retrieved_docs.append(parsed_doc)
+                    except json.JSONDecodeError:
+                        print(f"Error decoding JSON for doc: {doc}")
 
-        # Debugging: Print parsed documents
         print("Parsed Documents:", retrieved_docs)
 
-        # Extract text safely, ensuring doc is a dictionary
+        # Extract text safely
         retrieved_texts = "\n".join(
-            [doc["text"] if isinstance(doc, dict) and "text" in doc else str(doc) for doc in retrieved_docs]
+            [doc.get("text", str(doc)) for doc in retrieved_docs]
         )
 
-        # Pass to LLM for better response generation
         return self.generate_llm_response(prompt, retrieved_texts)
-
 
     def generate_llm_response(self, prompt, retrieved_text):
         """Uses Groclake's Modellake to refine and personalize the response."""
-        
-        # Create the payload for Modellake chat completion
         payload = {
             "messages": [
                 {"role": "system", "content": "You are a health assistant providing personalized recommendations."},
                 {"role": "user", "content": f"User Data: {prompt}\n\nRetrieved Health Knowledge: {retrieved_text}\n\nGenerate a highly personalized and friendly recommendation."}
             ],
-            "token_size": 300  # Adjust max tokens as needed
+            "token_size": 300
         }
 
-        # Call Groclake's chat completion API
         response = model_lake.chat_complete(payload)
-
-        # Extract and return the assistant's reply
         return response.get('answer', "I'm sorry, but I couldn't process the request.")
-
-
-#-------------------------------------------------------------------------------------------------
 
     def health_monitor(self):
         """Generates health monitoring recommendations using ChromaDB."""

@@ -4,26 +4,43 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Health Assistant</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
 </head>
 <body>
 
-    <div class="container">
+    <div class="container" id="mainContainer">
         <h1>🩺 Personal Health Assistant</h1>
-        <p>Click the button below to fetch your health report.</p>
-        <button id="fetchReport">🔄 Get Health Report</button>
+        <p class="intro-text">Click the button below to fetch your health report and recommendations.</p>
+        <button id="fetchReport" aria-label="Fetch Health Report">🔄 Get Health Report</button>
 
-        <div id="healthData" class="card hidden">
+        <!-- Loading Animation -->
+        <p id="loading" class="loading">⏳ Processing your data...</p>
+
+        <!-- Health Data Section -->
+        <div id="healthData" class="card">
             <h2>📊 Your Health Data</h2>
-            <table id="dataTable"></table>
+            <table id="dataTable">
+                <thead>
+                    <tr>
+                        <th>Measurement</th>
+                        <th>Value</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Dynamic data will be inserted here -->
+                </tbody>
+            </table>
         </div>
 
-        <div id="healthReport" class="card hidden">
+        <!-- Health Recommendations Section -->
+        <div id="healthReport" class="card">
             <h2>📑 Health Recommendations</h2>
-            <div id="reportContent"></div>
+            <div id="reportContent">
+                <!-- Dynamic recommendations will appear here -->
+            </div>
         </div>
     </div>
 
-    <script src="script.js"></script>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
 </body>
 </html>
