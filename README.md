@@ -1,9 +1,9 @@
 
 # SETUP:
 1. Install required dependencies to run this project
-*Creating virtual environment is optional*
-   * create virtual environment: `python -m venv venv`
-   * activate it : `source venv/bin/activate`
+   * *Creating virtual environment is optional*
+      * create virtual environment: `python -m venv venv`
+      * activate it : `source venv/bin/activate`
 
 2. INSTALL DEPEDENCIES : `pip install -r requirements.txt`
 
